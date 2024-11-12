@@ -1,0 +1,11 @@
+services:
+  api:
+    container_name: "tv-api"
+    restart: always
+    build: .
+    ports: 
+      - "8000:8000"
+    environment: 
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app

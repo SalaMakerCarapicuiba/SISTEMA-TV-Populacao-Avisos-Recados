@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --card: #f0f2f5;
+    --card-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --primary: #8de459;
+    --primary-foreground: #ffeff7;
+    --secondary: #f0f2f5;
+    --secondary-foreground: #202020;
+    --muted: #f0f2f5;
+    --muted-foreground: #757575;
+    --accent: #f0f2f5;
+    --accent-foreground: #202020;
+    --destructive: #e60000;
+    --destructive-foreground: #fafafa;
+    --border: #64c52c;
+    --input: #8de459;
+    --ring: #4c9621;
+    --radius: 0.5rem;
+    --chart-1: #f28b30;
+    --chart-2: #2e9f63;
+    --chart-3: #3b5e7e;
+    --chart-4: #a3d233;
+    --chart-5: #ffdb43;
+  }
+
+  .dark {
+    --background: #252525;
+    --foreground: #f0f2f5;
+    --card: #202020;
+    --card-foreground: #f0f2f5;
+    --popover: #3b3b3b;
+    --popover-foreground: #f0f2f5;
+    --primary: #8de459;
+    --primary-foreground: #181818;
+    --secondary: #202020;
+    --secondary-foreground: #f0f2f5;
+    --muted: #181818;
+    --muted-foreground: white;
+    --accent: #181818;
+    --accent-foreground: white;
+    --destructive: #d90000;
+    --destructive-foreground: #d9e6ff;
+    --border: #64c52c;
+    --input: #8de459;
+    --ring: #4c9621;
+    --radius: 0.5rem;
+    --chart-1: #f28b30;
+    --chart-2: #2e9f63;
+    --chart-3: #3b5e7e;
+    --chart-4: #a3d233;
+    --chart-5: #ffdb43;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Styles */
+
+/* Inside your global CSS or a Tailwind CSS file */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scrollbar handle */
+  border-radius: 2px; /* rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scrollbar handle on hover */
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0%) brightness(0%) contrast(0%);
+}
+
+.dark input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(100%) contrast(0%);
+}
+
+.fc-theme-standard {
+  th,
+  td,
+  .fc-scrollgrid {
+    border-color: #181818;
+  }
+
+  td {
+    padding: 2px;
+  }
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #71e42f22;
+  color: white;
+}
